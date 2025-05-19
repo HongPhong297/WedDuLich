@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Camping Nhóm 2N1Đ - Bãi Tiên</title>
+    <style>
+        :root {
+            --primary-color: #ff6b00;
+            --secondary-color: #00b8d4;
+            --border-color: #f0f0f0;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: var(--light-bg);
+            border-radius: 5px;
+        }
+        
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .content {
+            display: flex;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .left-column {
+            flex: 6;
+            padding: 20px;
+            border-right: 1px dashed #ccc;
+        }
+        
+        .right-column {
+            flex: 4;
+            padding: 20px;
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .section-title h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .day-title {
+            color: var(--primary-color);
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .day-title i {
+            margin-right: 8px;
+        }
+        
+        .time-entry {
+            display: flex;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .time {
+            width: 60px;
+            color: var(--primary-color);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            overflow: hidden;
+            margin-right: 15px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icon-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .activity-content {
+            flex: 1;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 15px;
+        }
+        
+        .activity-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .activity-description {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .services-list {
+            list-style-type: none;
+        }
+        
+        .services-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .services-list li:before {
+            content: "✓";
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .menu-section {
+            margin-top: 30px;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .menu-item {
+            padding: 8px;
+            background-color: rgba(255, 107, 0, 0.05);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .menu-item:before {
+            content: "✓";
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--light-bg);
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-radius: 5px;
+        }
+        
+        .eco-note {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(255, 238, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .star-icon {
+            font-size: 24px;
+            color: #FFD700;
+            margin-right: 10px;
+        }
+        
+        .highlight {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .left-column {
+                border-right: none;
+                border-bottom: 1px dashed #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏕️ TOUR CAMPING NHÓM 2N1Đ</h1>
+            <p>Địa điểm: Bãi biển Bãi Tiên | Giá: 699.000đ/người</p>
+            <p>Thời gian: 15h00-10h00 sáng hôm sau</p>
+        </div>
+        
+        <div class="content">
+            <div class="left-column">
+                <div class="section-title">
+                    <span>🕒</span>
+                    <h2>LỊCH TRÌNH</h2>
+                </div>
+                
+                <div class="day-title">
+                    <span>⏰</span> NGÀY 1
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">15:00</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci11c2VycyI+PHBhdGggZD0iTTE3IDIxdi0yYTQgNCAwIDAgMC00LTRINWE0IDQgMCAwIDAtNCA0djIiPjwvcGF0aD48Y2lyY2xlIGN4PSI5IiBjeT0iNyIgcj0iNCIgPjwvY2lyY2xlPjxwYXRoIGQ9Ik0yMyAyMXYtMmE0IDQgMCAwIDAtMy02Ij48L3BhdGg+PHBhdGggZD0iTTE2IDMuMTNhNCA0IDAgMCAxIDAgNy43NSI+PC9wYXRoPjwvc3ZnPg==" alt="Đón khách">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Đón khách tập trung điểm hẹn</div>
+                        <div class="activity-description">Đội trưởng hướng dẫn quy tắc an toàn</div>
+                    </div>
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">15:30</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci13YXRlciI+PHBhdGggZD0iTTAgMTZjMy0zLjUgNS45My02IDEyLTZzOSAyLjUgMTIgNi01LjkzIDYtMTIgNi05LTIuNS0xMi02eiI+PC9wYXRoPjxsaW5lIHgxPSIxMiIgeTE9IjgiIHgyPSIxMiIgeTI9IjIiPjwvbGluZT48cGF0aCBkPSJNMTYgNmgtOCI+PC9wYXRoPjwvc3ZnPg==" alt="Tắm biển">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Tắm biển vui chơi tự do</div>
+                        <div class="activity-description">Tổ chức các trò chơi nhẹ trên bãi biển kéo co, bóng chuyền...</div>
+                        <div class="activity-description">Có chỗ tắm nước ngọt thay đồ sau khi tắm</div>
+                    </div>
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">17:00</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci1ob21lIj48cGF0aCBkPSJNMyA5bDktNyA5IDd2MTFhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJ6Ij48L3BhdGg+PHBvbHlsaW5lIHBvaW50cz0iOSAyMiA5IDEyIDE1IDEyIDE1IDIyIj48L3BvbHlsaW5lPjwvc3ZnPg==" alt="Dựng lều">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Dựng lều chuẩn bị khu cắm trại</div>
+                        <div class="activity-description">Trưởng nhóm phân công ae dựng lều setup bàn ăn ánh sáng</div>
+                    </div>
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">18:00</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci1jb2ZmZWUiPjxwYXRoIGQ9Ik0xOCA4aDFhNCA0IDAgMCAxIDQgNCAyIDIgMCAwIDEtMiAyaC0xIj48L3BhdGg+PHBhdGggZD0iTTIgOGgxNnY5YTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00Vjh6Ij48L3BhdGg+PGxpbmUgeDE9IjYiIHkxPSIxIiB4Mj0iNiIgeTI9IjQiPjwvbGluZT48bGluZSB4MT0iMTAiIHkxPSIxIiB4Mj0iMTAiIHkyPSI0Ij48L2xpbmU+PGxpbmUgeDE9IjE0IiB5MT0iMSIgeDI9IjE0IiB5Mj0iNCI+PC9saW5lPjwvc3ZnPg==" alt="BBQ">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Ăn tối BBQ tiệc ngoài trời</div>
+                        <div class="activity-description">Thực đơn: thịt nướng, tôm nướng, mực nướng, ghẹ, canh chua, cơm, gà</div>
+                        <div class="activity-description">Mở nhạc chill chill</div>
+                    </div>
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">20:00</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci1mbGFtZSI+PHBhdGggZD0iTTguNSAxNC41QTIuNSAyLjUgMCAwIDAgMTEgMTJjMC0xLjM4LS41LTIuNjctMS40LTMuNjFsLTEuMzQuNGE0LjkxIDQuOTEgMCAwIDAtMS40MS0uOTEgMTEgMTEgMCAwIDAtMi45MS0xMCAxMSAxMSAwIDAgMCA5IDYuODMgMTEgMTEgMCAwIDEtMiAxMmwxLjQxIDEuNDFjLjUuNS44OCAxLjEgMS4xMSAxLjc4IDEuMTMuMzMgMi4yNi41MSAzLjQ1LjUxYTE3Ljk4IDE3Ljk4IDAgMCAwIDQuNzgtLjYzQTEyLjExIDEyLjExIDAgMCAxIDAgMTZjMC0yLjc2IDEuMTItNS4yNiAyLjkzLTcuMDdhMTIuMDEgMTIuMDEgMCAwIDEgOC41My0zLjQ4Yy0xLjUuMDQtMi45LjU1LTQgMS40YTcuNSA3LjUgMCAwIDAgMCA1LjMyIj48L3BhdGg+PC9zdmc+" alt="Lửa trại">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Lửa trại giao lưu và nghỉ ngơi</div>
+                    </div>
+                </div>
+                
+                <div class="day-title">
+                    <span>⏰</span> NGÀY 2
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">5:30</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci1zdW4iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjUiPjwvY2lyY2xlPjxsaW5lIHgxPSIxMiIgeTE9IjEiIHgyPSIxMiIgeTI9IjMiPjwvbGluZT48bGluZSB4MT0iMTIiIHkxPSIyMSIgeDI9IjEyIiB5Mj0iMjMiPjwvbGluZT48bGluZSB4MT0iNC4yMiIgeTE9IjQuMjIiIHgyPSI1LjY0IiB5Mj0iNS42NCI+PC9saW5lPjxsaW5lIHgxPSIxOC4zNiIgeTE9IjE4LjM2IiB4Mj0iMTkuNzgiIHkyPSIxOS43OCI+PC9saW5lPjxsaW5lIHgxPSIxIiB5MT0iMTIiIHgyPSIzIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMjEiIHkxPSIxMiIgeDI9IjIzIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iNC4yMiIgeTE9IjE5Ljc4IiB4Mj0iNS42NCIgeTI9IjE4LjM2Ij48L2xpbmU+PGxpbmUgeDE9IjE4LjM2IiB5MT0iNS42NCIgeDI9IjE5Ljc4IiB5Mj0iNC4yMiI+PC9saW5lPjwvc3ZnPg==" alt="Bình minh">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Thức dậy đón bình minh</div>
+                        <div class="activity-description">Ngắm mặt trời mọc, đón bình minh đầu tiên tại Việt Nam và chụp ảnh</div>
+                    </div>
+                </div>
+                
+                <div class="time-entry">
+                    <div class="time">6:30</div>
+                    <div class="icon-circle">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2YjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci1jb2ZmZWUiPjxwYXRoIGQ9Ik0xOCA4aDFhNCA0IDAgMCAxIDQgNCAyIDIgMCAwIDEtMiAyaC0xIj48L3BhdGg+PHBhdGggZD0iTTIgOGgxNnY5YTQgNCAwIDAgMS00IDRINmE0IDQgMCAwIDEtNC00Vjh6Ij48L3BhdGg+PGxpbmUgeDE9IjYiIHkxPSIxIiB4Mj0iNiIgeTI9IjQiPjwvbGluZT48bGluZSB4MT0iMTAiIHkxPSIxIiB4Mj0iMTAiIHkyPSI0Ij48L2xpbmU+PGxpbmUgeDE9IjE0IiB5MT0iMSIgeDI9IjE0IiB5Mj0iNCI+PC9saW5lPjwvc3ZnPg==" alt="Bữa sáng">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-title">Ăn sáng nhẹ</div>
+                        <div class="activity-description">Thực đơn: mì tôm mực</div>
+                        <div class="activity-description">Thu dọn đồ đạc</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; font-style: italic; color: #666; font-size: 14px;">
+                    Lưu ý: Lịch trình có thể thay đổi theo thời tiết để đảm bảo trải nghiệm tốt nhất
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="section-title">
+                    <span>✓</span>
+                    <h2>DỊCH VỤ BAO GỒM</h2>
+                </div>
+                
+                <ul class="services-list">
+                    <li>Lều cắm trại chuyên dụng</li>
+                    <li>Đội trưởng hướng dẫn kinh nghiệm</li>
+                    <li>Bữa tối BBQ + bữa sáng</li>
+                    <li>Nước uống trong suốt hành trình</li>
+                    <li>Trò chơi tập thể vui nhộn</li>
+                    <li>Chụp ảnh lưu niệm</li>
+                    <li>Khu vực tắm nước ngọt, thay đồ</li>
+                    <li>Bảo hiểm du lịch</li>
+                </ul>
+                
+                <div class="menu-section">
+                    <div class="section-title">
+                        <span>🍽️</span>
+                        <h2>THỰC ĐƠN</h2>
+                    </div>
+                    
+                    <div class="menu-grid">
+                        <div class="menu-item">Thịt nướng</div>
+                        <div class="menu-item">Canh chua</div>
+                        <div class="menu-item">Tôm nướng</div>
+                        <div class="menu-item">Cơm trắng</div>
+                        <div class="menu-item">Mực nướng</div>
+                        <div class="menu-item">Gà nướng</div>
+                        <div class="menu-item">Ghẹ hấp</div>
+                        <div class="menu-item">Rau củ quả</div>
+                    </div>
+                </div>
+                
+                <div class="eco-note">
+                    <div class="star-icon">⭐</div>
+                    <p>"Plan To Camp sử dụng <span class="highlight">VẬT LIỆU TÁI CHẾ</span> để check-in nhằm góp phần bảo vệ sinh thái"</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Hotline:</strong> 0911.380.111 | <strong>Website:</strong> plantocamp.vn</p>
+            <p>GPLHQT số: 79-1625/2023</p>
+        </div>
+    </div>
+</body>
+</html> 

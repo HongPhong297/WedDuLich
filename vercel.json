@@ -1,0 +1,9 @@
+{
+  "buildCommand": false,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "github": {
+    "silent": true
+  }
+} 

@@ -1,0 +1,8 @@
+{
+  "name": "camping-tour-poster",
+  "version": "1.0.0",
+  "description": "Tour camping Bãi Tiên",
+  "scripts": {
+    "start": "npx serve"
+  }
+} 

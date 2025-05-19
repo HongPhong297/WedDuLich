@@ -1,0 +1,589 @@
+/* Base styles */
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: #00b8d4;
+    --accent-color: #ffee00;
+    --dark-color: #333;
+    --light-color: #fff;
+    --background-color: #f5f5f5;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.poster-container {
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+/* Header styles */
+header {
+    background-image: url('picture/muidien.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+.logo, .tour-title, .beach-title-container {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    padding: 20px;
+    align-self: flex-start;
+}
+
+.logo-circle {
+    background-color: var(--primary-color);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-circle i {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.tour-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tour-title h1 {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: white;
+    text-align: center;
+}
+
+.beach-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.beach-title {
+    background-color: #FF6600;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    min-width: 60%;
+}
+
+.highlight-text {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 
+                2px -2px 0 #fff, -2px 2px 0 #fff;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.special-font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FF6600;
+    text-shadow: 2px 2px 0 #fff, -1px -1px 0 #fff, 
+                2px -1px 0 #fff, -1px 2px 0 #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Nếu muốn font khác có thể dùng Dancing Script */
+/*
+.special-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 46px;
+    color: #FF6600;
+}
+*/
+
+.price-tag {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.price-tag::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background-color: #FF6600;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(0, 0);
+}
+
+.price-tag p {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.price-tag h3 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-top: 5px;
+    color: white;
+}
+
+/* Content styles */
+.content {
+    display: flex;
+    padding: 20px;
+    background: white;
+}
+
+.itinerary {
+    flex: 6;
+    padding-right: 20px;
+}
+
+.services-container {
+    flex: 4;
+    padding-left: 20px;
+    border-left: 1px dashed #ccc;
+}
+
+.itinerary h3, 
+.services h3, 
+.food-menu h3 {
+    font-size: 20px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Day styles */
+.day {
+    margin-bottom: 20px;
+}
+
+.day h4 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Time block styles */
+.time-block {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.time-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.time {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.circle-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity {
+    flex: 1;
+    background-color: rgba(255, 107, 0, 0.05);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--primary-color);
+}
+
+.activity h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.activity p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Note styles */
+.note {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+/* Bãi Tiên image styles */
+.baitien-image {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.baitien-image .rounded-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #FF6600;
+    object-fit: cover;
+}
+
+/* Price information styles */
+.price-info {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(255, 107, 0, 0.1);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--primary-color);
+}
+
+.price-info h3 {
+    font-size: 20px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.price-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.price-item {
+    text-align: center;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 40%;
+}
+
+.group-size {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.price-value {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FF6600;
+}
+
+.coordinator {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--dark-color);
+}
+
+.coordinator strong {
+    color: var(--primary-color);
+}
+
+/* Services styles */
+.services ul {
+    list-style-type: none;
+}
+
+.services li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.check {
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Food menu styles */
+.food-menu {
+    margin: 25px 0;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-column {
+    flex: 1;
+}
+
+.menu-item {
+    background-color: rgba(0, 184, 212, 0.05);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+}
+
+/* Highlight box styles */
+.highlight-box {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.highlight-box img {
+    width: 100%;
+    height: auto;
+}
+
+.highlight-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #FF6600;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+}
+
+.highlight-text h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    border: none;
+    color: white;
+}
+
+.highlight-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.highlight-text p.highlight {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Eco note styles */
+.eco-note {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 238, 0, 0.1);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 15px 0;
+}
+
+.star-icon {
+    font-size: 26px;
+    margin-right: 15px;
+    color: var(--accent-color);
+}
+
+.eco-note p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.eco-note .highlight {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Footer styles */
+footer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.contact-circle i {
+    font-size: 18px;
+}
+
+.contact-item p {
+    font-size: 12px;
+    color: #666;
+}
+
+.contact-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.license {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .itinerary {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .services-container {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px dashed #ccc;
+        padding-top: 20px;
+    }
+    
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .logo, .tour-title, .price-tag {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .price-tag {
+        align-items: center;
+    }
+    
+    .price-tag::after {
+        transform: translate(0, 0);
+        width: 100px;
+        height: 100px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+} 
