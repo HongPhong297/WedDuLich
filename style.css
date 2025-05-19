@@ -290,6 +290,16 @@ header::before {
     margin-bottom: 5px;
 }
 
+.note-text {
+    color: #e65100 !important;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 13px !important;
+    border-left: 2px solid #FF6600;
+    padding-left: 8px;
+    margin-top: 8px !important;
+}
+
 /* Note styles */
 .note {
     font-size: 14px;
@@ -383,15 +393,26 @@ header::before {
 
 .services li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 12px;
     font-size: 14px;
+    flex-wrap: wrap;
 }
 
 .check {
     color: var(--primary-color);
     margin-right: 8px;
     font-weight: bold;
+}
+
+.service-detail {
+    margin-left: 25px;
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+    padding-top: 3px;
+    width: 100%;
+    padding-bottom: 5px;
 }
 
 /* Food menu styles */
